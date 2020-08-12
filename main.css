@@ -1,2 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+body,
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #005dff;
+}
 /*# sourceMappingURL=main.css.map */

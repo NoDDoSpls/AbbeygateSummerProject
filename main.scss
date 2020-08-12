@@ -1,1 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+$colors: (primary: #005dff, accent: #fff6bb);
+
+body,
+html {
+	height: 100%;
+}
+body {
+	background-color: map-get($colors, primary);
+}
