@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-$colors: (primary: #005dff, accent: #fff6bb, primary-light: lighten(#005dff, 40%), primary-dark: darken(#005dff, 40%));
+$colors: (primary: #005dff, accent: #ffffff, primary-light: lighten(#005dff, 40%), primary-dark: darken(#005dff, 40%));
 @function color($color-name) {
 	@return map-get($colors, $color-name );
 }
