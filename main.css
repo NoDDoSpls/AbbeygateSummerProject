@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+li strong a {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: -webkit-text-decoration 0.7s;
+  transition: -webkit-text-decoration 0.7s;
+  transition: text-decoration 0.7s;
+  transition: text-decoration 0.7s, -webkit-text-decoration 0.7s;
+}
+
+li strong a:hover {
+  text-decoration: underline;
+}
+
 body,
 html {
   height: 100%;
@@ -128,11 +141,14 @@ main a {
   text-align: center;
   margin: 50px auto 0 auto;
   padding: 15px;
+}
+
+main a.src {
   -webkit-transition: background-color .7s;
   transition: background-color .7s;
 }
 
-main a:hover {
+main a.src:hover {
   background-color: orange;
 }
 /*# sourceMappingURL=main.css.map */

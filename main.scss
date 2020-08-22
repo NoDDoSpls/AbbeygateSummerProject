@@ -5,13 +5,22 @@ $colors: (primary: #005dff, accent: #ffffff, primary-light: lighten(#005dff, 40%
 }
 
 $desktop: 840px;
-
+li strong a {
+	margin: 0;
+	padding: 0;
+	transition: text-decoration 0.7s;
+	&:hover {
+		text-decoration: underline;
+	}
+}
 @mixin desktop {
 	@media (min-width: #{$desktop}) {
 		@content;
 	}
 }
-
+@mixin grid($grid-area) {
+	grid-area: $grid-area;
+}
 $padding: 15px;
 body,
 html {
@@ -57,7 +66,7 @@ main {
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 		width: 80%;
 		@include desktop() {
-			grid-area: card;
+			@include grid(card);
 			height: fit-content;
 			align-self: center;
 			margin: 1em;
@@ -90,7 +99,7 @@ main {
 		padding: $padding;
 		text-align: center;
 		@include desktop() {
-			grid-area: primary;
+			@include grid(primary);
 			text-align: left;
 			margin: 4em 0 0 4em;
 		}
@@ -114,6 +123,8 @@ main {
 		text-align: center;
 		margin: 50px auto 0 auto;
 		padding: $padding;
+	}
+	a.src {
 		transition: background-color .7s;
 		&:hover {
 			background-color: orange;
